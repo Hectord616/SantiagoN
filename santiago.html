@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Que vivan los novios</title>
+    <meta charset="UTF-8">
+</head>
+<style>
+    body {
+        background-color: pink;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .contenedor {
+        display: flex;
+        justify-content: center;
+    }
+
+    .titulo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .opciones p {
+        text-align: center;
+        background: #000000;
+        display: initial;
+        padding: 12px;
+        color: #ffffff;
+        border-radius: 2px;
+        font-weight: bold;
+    }
+
+    p.p1 {
+        position: absolute;
+        top: 250px;
+        left: 550px;
+        width: 100px;
+    }
+
+    p.p2 {
+        position: absolute;
+        top: 250px;
+        left: 300px;
+        width: 100px;
+    }
+
+    #si {
+        align-content: center;
+        background: #000000;
+        left: 340px;
+        position: absolute;
+        top: 300px;
+        width: auto;
+        color: #ffffff;
+        padding: 50px;
+        display: none;
+    }
+
+    .img {
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".p1").hover(function () {
+            arriba = Math.random() * (400);
+            abajo = Math.random() * (609);
+            $(this).css("top", arriba);
+            $(this).css("left", abajo);
+        });
+    });
+    function dijoSi() {
+        document.getElementById("si").style.display = "block";
+    }
+</script>
+
+<body>
+    <div class="titulo">
+        <h1>¿QUIERES SER MI NOVIA?</h1>
+    </div>
+    <div class="img">
+        <img src="./Img.jpeg">
+    </div>
+    <div class="contenedor">
+        <div class="opciones">
+            <p class="p1">NO</p>
+            <p onclick="dijoSi()" class="p2">SI</p>
+            <div id="si">
+                <!-- <img src="./Img.jpeg" width="100%"> -->
+                <h2>Gracias bb, lo sabía </h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
